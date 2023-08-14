@@ -2,10 +2,10 @@ import { buildLegacyTheme } from "sanity";
 
 const props = {
   "--my-white": "#fff",
-  "--color-primary": "#FF6B6B",
-  "--color-secondary": "#6B8AFF",
-  "--color-tertiary": "#3DDC97",
-  "--color-accent": "#FFC65C",
+  "--color-primary": "#3C1143",
+  "--color-secondary": "#C25178",
+  "--color-tertiary": "#EADEE5",
+  "--color-accent": "#240D1B",
   "--color-dark": "#333",
   "--color-success": "#4CAF50",
   "--color-warning": "#FFA500",
@@ -28,7 +28,7 @@ export const myTheme = buildLegacyTheme({
 
   // Default Button
   "--default-button-color": "#666",
-  "--default-button-primary-color": props["--color-primary"],
+  "--default-button-primary-color": props["--color-secondary"],
   "--default-button-success-color": props["--color-success"],
   "--default-button-warning-color": props["--color-warning"],
   "--default-button-danger-color": props["--color-danger"],
