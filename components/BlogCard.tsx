@@ -31,10 +31,10 @@ const BlogCard = ({ post }: Props) => {
                             )}
                         </p>
                     </div>
-                    <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
+                    <div className="flex flex-col md:flex-row md:flex-wrap ml-8 gap-y-2 md:gap-x-2 items-center">
                         {post.categories.map((category) => (
-                            <div key={category._id} className="bg-secondary text-center text-black px-3 py-1 rounded-full text-sm font-semibold ">
-                                <p>{category.title} </p>
+                            <div key={category._id} className="bg-secondary text-center text-black px-3 py-1 rounded-full text-sm font-semibold w-[80px]  ">
+                                <p className="truncate">{category.title} </p>
                             </div>
                         ))}
                     </div>
