@@ -25,3 +25,12 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+
+.gradient-text {
+  background: linear-gradient(to bottom, #3C1143, #C25178);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  height:90px
+}

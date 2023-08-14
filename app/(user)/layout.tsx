@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import Banner from '@/components/Banner'
 import ScrollToTop from '@/components/ScrollToTop'
 import Footer from '@/components/Footer'
+import Providers from '@/components/Providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,11 +23,13 @@ export default function RootLayout({
     <html lang="en">
 
       <body className="max-w-7xl mx-auto">
-        <Header />
-        <ScrollToTop />
-        <Banner />
-        {children}
-        <Footer />
+        <Providers>
+          <Header />
+          <ScrollToTop />
+          <Banner />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   )

@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
@@ -18,7 +20,7 @@ const DarkModeButton = () => {
     <div className="md:mr-5 mt-1">
       {currentTheme === "dark" ? (
         <SunIcon
-          className="h-8 w-8 cursor-pointer text-yellow-500"
+          className="h-8 w-8 cursor-pointer text-yellow-600"
           onClick={() => setTheme("light")}
         />
       ) : (

@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import DarkModeButton from './DarkModeButton'
 
 function Header() {
     return (
@@ -11,10 +12,11 @@ function Header() {
                     <h1 className='text-3xl font-bold'>The Beacon</h1>
                 </Link>
             </div>
-            <div className="">
-                <Link href="/" className='px-5 py-3 text-sm md:text-base bg-gray-900 text-tertiary flex items-center rounded-full text-center '>
+            <div className="flex space-x-4">
+                <Link href="/" className='px-5 py-3 text-sm md:text-base bg-gray-900 hover:bg-secondary text-tertiary flex items-center rounded-full text-center transition-all duration-[350ms] ease-out '>
                     Subscribe for more!
                 </Link>
+                <DarkModeButton />
             </div>
         </header>
     )
