@@ -9,25 +9,25 @@ type Props = {
     params: {
         slug: string;
     };
-};
+}; 
 
-export const revalidate = 60;
+export const revalidate = 60; //revalidate every 60 seconds
 
-// export async function generateStaticParams() {
-//     const query = groq`
-// 		*[_type == "post"]
-// 		{
-// 			slug
-// 		}
-// 		`;
+export async function generateStaticParams() {
+    const query = groq`
+		*[_type == "post"]
+		{
+			slug
+		}
+		`;
 
-//     const slugs: Post[] = await client.fetch(query);
-//     const slugRoutes = slugs.map((slug) => slug.slug.current);
+    const slugs: Post[] = await client.fetch(query);
+    const slugRoutes = slugs.map((slug) => slug.slug.current);
 
-//     return slugRoutes.map((slug) => ({
-//         slug,
-//     }));
-// }
+    return slugRoutes.map((slug) => ({
+        slug,
+    }));
+}
 
 async function Post({ params: { slug } }: Props) {
     const query = groq`
